@@ -1,6 +1,6 @@
-const io = require("socket.io")(5000, {
+const io = require("socket.io")(process.env.PORT || 5000, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: ['https://irenge-socialfront-1eby.vercel.app','https://irenge-socialfront.vercel.app', 'http://localhost:3000'],
     },
 });
 
