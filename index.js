@@ -1,6 +1,9 @@
 const io = require("socket.io")(process.env.PORT || 5000, {
     cors: {
-        origin: ['https://irenge-socialfront-1eby.vercel.app','https://irenge-socialfront.vercel.app', 'http://localhost:3000'],
+        origin: ['https://irenge-socialfront-1eby.vercel.app', 'http://localhost:3000'],
+        methods: ["GET", "POST"],
+        allowedHeaders: ["Content-Type"],
+        credentials: true,
     },
 });
 
